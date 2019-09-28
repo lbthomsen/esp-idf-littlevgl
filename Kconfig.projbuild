@@ -1,4 +1,4 @@
-menu "ST7789"
+menu "LittlevGL"
 
     config DISP_HOR_RES
         int "Display Horizontal Resolution"
