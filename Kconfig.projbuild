@@ -1,0 +1,75 @@
+menu "ST7789"
+
+    config DISP_HOR_RES
+        int "Display Horizontal Resolution"
+        range 0 2000
+        default 240
+        help
+            The horizontal resolution of the display.
+
+    config DISP_VER_RES
+        int "Display Vertical Resolution"
+        range 0 2000
+        default 240
+        help
+            The vertical resolution of the display.
+
+    config DISP_SPI_SPEED
+        int "Display SPI Speed in MHz"
+        range 0 80
+        default 40
+        help
+            SPI clock speed
+
+    config DISP_SPI_MOSI
+        int "Display SPI MOSI GPIO"
+        range 0 34
+        default 23
+        help
+            GPIO used for display SPI MOSI
+
+    config DISP_SPI_CLK
+        int "Display SPI CLK GPIO"
+        range 0 34
+        default 19
+        help
+            GPIO used for display SPI CLK
+    
+    config DISP_SPI_CS
+        int "Display SPI CS"
+        range -1 34
+        default -1
+        help
+            GPIO used for SPI CS.
+
+            On some st7789 modules, the CS is hard wired.  On such modules set to -1.
+
+    config DISP_DC
+        int "Display DC GPIO"
+        range 0 34
+        default 21
+        help
+            GPIO used for display DC
+
+    config DISP_RST
+        int "Display Reset GPIO"
+        range 0 34
+        default 18
+        help
+            GPIO used for display Reset
+
+    config DISP_BCKL
+        int "Display Backlight GPIO"
+        range 0 34
+        default 5
+        help
+            GPIO used to control display Backlight
+
+    config DISP_BCKL_ACTIVE_LVL
+        int "Display Backlight Active Level"
+        range 0 1
+        default 1
+        help
+            Which level turn on the backlight
+
+endmenu
